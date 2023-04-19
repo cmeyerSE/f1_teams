@@ -5,7 +5,7 @@ class TeamService {
     }
 
     getTeams() {
-        fetch(`${this.endpoint}/teams`) //when endpoint is hit data is array of objects
+        fetch("${this.endpoint}/teams") //when endpoint is hit data is array of objects
         .then (resp => resp.json()) // all resps come back as strings
         .then(teams => {
             debugger
