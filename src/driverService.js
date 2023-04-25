@@ -20,7 +20,7 @@ class DriverService {
             name: document.getElementById('name').value,
             description: document.getElementById('description').value,
             skill: document.getElementById('skill').value,
-            team_id: 27
+            team_id: document.getElementById("team-dropdown").value
         }
 
         const configObj = {

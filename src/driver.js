@@ -19,14 +19,19 @@ class Driver {
 
     driverHTML(){
         this.element.innerHTML += `
-            <div>
-                <h3>${this.name}</h3>
-                <p>${this.description}</p>
-                <p>${this.skill}</p>
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">${this.name}</h5>
+                    <p class="card-text">${this.description}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>
+                    </div>
+                </div>
+                </div>
             </div>
-            <button id='delete-bttn'>Delete</button>
-            <br>
-            <br>
+        </div>
         `
         return this.element
     }
@@ -45,6 +50,9 @@ class Driver {
                     <br><br>
                     Skill: <input type="text" id="skill">
                     <br><br>
+                    Select Team: <select name="team_id" id="team-dropdown">
+                    </select>
+                    <br><br>
                     <input type="submit" id="create">
             </form>
         `
@@ -52,6 +60,7 @@ class Driver {
 
     handleClick = (id) => {
         if (id.target.innerText === 'Delete'){
+            this.element.remove()
             driverService.deleteDriver(this.id)
         }
     }

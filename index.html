@@ -1,27 +1,129 @@
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
     <title>F1 Team Creator</title>
-</head>
-<body>
-    <div id="teams-container">
 
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="index.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-dark" style="background-color: #cc0c0c;">
+    <div class="container d-flex justify-content-between">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <strong>F1 Team Creator</strong>
+      </a>
+      </div>
     </div>
+  </div>
+<!-- NAV -->
+</header>
 
+<main role="main">
+
+  <!-- <form id="user-comments-form">
+    <input id="user-comments-input"  type="text">
+    <input id="user-comments-submit"  type="submit">
+  </form>
+  
+  <p>Submitted comments will appear here inside this div below:</p>
+  
+  <div id="user-comments-div"> </div> -->
+
+  
+  <section class="jumbotron text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <h1>F1 Team Creator</h1>
+          <br>
+          <p>Create a dream lineup of drivers for your team!</p>
+          <button type="button" class="btn btn-secondary">View Drivers</button>
+          <br>
+          <br>
+          <div id="team-form-container">
+        
+          </div>
+          <button type="button" class="btn btn-primary">Create Team</button>
+          <br>
+          <br>
+          <br>
+          <div id="driver-form-container">
+          <p class="lead text-muted">Create a driver...</p>
+          </div>
+          <br><br>
+        <br>
+        </div>
+        
+        <div class="col-sm">
+          <div id="teams-container">
+            
+          </div>
+        </div>
+    </div>
+    <div class="col-sm">
+      <div id="team-select-div">
+        <h5>View team:</h5><select id="teams-select" name="teams-select">
+        </select>
+        <br><br>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <div class="album py-5 bg-light">
     <div id="drivers-container">
 
+      <div class="row" >
+
+           <!-- INSIDE ROW DIV -->
+      </div>
     </div>
+  </div>
 
-    <div id="form-container">
+</main>
 
-    </div>
+<footer class="text-muted">
+  <div class="container">
+    <p class="float-right">
+      <a href="#">Back to top</a>
+    </p>
+  </div>
+</footer>
 
-    <script src="src/team.js"></script>
-    <script src="src/driver.js"></script>
-    <script src="src/teamService.js"></script>
-    <script src="src/driverService.js"></script>
-    <script src="index.js"></script>
+<script src="src/driverService.js"></script>
+<script src="src/driver.js"></script>
+<script src="src/teamService.js"></script>
+<script src="src/team.js"></script>
+<script src="index.js"></script>
+
 </body>
 </html>
