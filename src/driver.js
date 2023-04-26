@@ -1,7 +1,8 @@
 class Driver {
     static all = []
     static driversContainer = document.getElementById("drivers-container")
-    static driverForm = document.getElementById("form-container")
+    static driverForm = document.getElementById("driver-form-container")
+    static driverButton = document.querySelector("button.btn.btn-secondary")
     
     constructor({id, name, description, skill, team_id}) {
         this.id = id
@@ -37,7 +38,7 @@ class Driver {
     }
 
     addOnDom(){
-        Driver.driversContainer.append(this.driverHTML())
+        Driver.driversContainer.prepend(this.driverHTML())
     }
 
     static renderForm() {
@@ -58,11 +59,25 @@ class Driver {
         `
     }
 
-    handleClick = (id) => {
-        if (id.target.innerText === 'Delete'){
+    handleClick = () => {
+        if(event.target.innerText === "Delete"){
             this.element.remove()
-            driverService.deleteDriver(this.id)
+        driverService.deleteDriver(this.id)
         }
+    }
+
+    renderSelectedDrivers() {
+        return `
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-name">${this.name}</h5>
+                            <p class="card-description">${this.description}</p>
+                            <p class="card-team">${this.team}</p>
+                    </div>
+                </div>
+            </div>
+        `
     }
     
 }
