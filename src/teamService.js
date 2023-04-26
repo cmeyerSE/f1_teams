@@ -19,7 +19,7 @@ class TeamService {
 
     createTeam(){
         const team = {
-                name: document.getElementById('name').value
+            name: document.getElementById('name').value
         }
     
         const configObj = {
@@ -39,5 +39,4 @@ class TeamService {
             t.teamSelect()
         })
     }
-
 }

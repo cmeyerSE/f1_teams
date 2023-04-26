@@ -11,7 +11,7 @@ class Driver {
         this.skill = skill
         this.team_id = team_id
 
-        this.element = document.createElement('li')
+        this.element = document.createElement('ul')
         this.element.dataset.id = this.id
         this.element.id = `driver-${this.id}`
         this.element.addEventListener('click', this.handleClick)
@@ -73,7 +73,8 @@ class Driver {
                         <div class="card-body">
                             <h5 class="card-name">${this.name}</h5>
                             <p class="card-description">${this.description}</p>
-                            <p class="card-team">${this.team}</p>
+                            <p class="card-skill">${this.skill}</p>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>
                     </div>
                 </div>
             </div>

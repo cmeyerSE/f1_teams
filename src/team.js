@@ -1,15 +1,18 @@
 class Team {
-
     static all = []
     static teamsContainer = document.getElementById("teams-container")
     static teamForm = document.getElementById('team-form-container')
     static teamButton = document.querySelector("button.btn.btn-primary")
     static teamSelect = document.querySelector('#teams-select')
 
-    constructor({ name, id }) {
+    constructor({ name, id}) {
         this.name = name
         this.id = id
-        this.element = document.createElement('div')
+
+        this.element = document.createElement('ul')
+        this.element.dataset.id = this.id
+        this.element.id = `team-${this.id}`
+        this.element.addEventListener('click', this.handleClick)
         Team.all.push(this)
     }
 
@@ -19,7 +22,6 @@ class Team {
                 <li class="list-group-item">${this.name}</li>
             </ul>
             `
-        this.element.id = `team-${this.id}`
         return this.element
     }
 
@@ -36,7 +38,6 @@ class Team {
 
     addOnDom(){
         Team.teamsContainer.append(this.renderTeam())
-        
     }
 
     addToForm(){
@@ -52,5 +53,7 @@ class Team {
         select.innerText = this.name;
         Team.teamSelect.appendChild(select)
     }
+
+    
 
 }
