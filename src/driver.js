@@ -45,7 +45,7 @@ class Driver {
         Driver.driverForm.innerHTML += `
             <form id="new-driver-form">
                 <h3>Create a Driver</h3>
-                    Name: <input type="text" id="name">
+                    Name: <input type="text" class="name">
                     <br><br>
                     Description: <input type="text" id="description">
                     <br><br>

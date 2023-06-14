@@ -8,7 +8,6 @@ Team.teamForm.addEventListener('submit', handleTeamSubmit)
 Team.teamSelect.addEventListener('change', handleSelectedTeam)
 Driver.driverButton.addEventListener('click', viewAllDrivers)
 
-
 teamService.getTeams()
 driverService.getDrivers()
 Driver.renderForm()

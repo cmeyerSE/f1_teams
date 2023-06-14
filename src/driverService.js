@@ -17,7 +17,7 @@ class DriverService {
 
     createDriver(){
         const driver = {
-            name: document.getElementById('name').value,
+            name: document.querySelector('.name').value,
             description: document.getElementById('description').value,
             skill: document.getElementById('skill').value,
             team_id: document.getElementById("team-dropdown").value

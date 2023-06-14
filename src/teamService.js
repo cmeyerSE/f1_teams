@@ -4,7 +4,7 @@ class TeamService {
         this.endpoint = endpoint;
     }
 
-    getTeams() {
+    getTeams() {d
         fetch(`${this.endpoint}/teams`)
         .then(resp => resp.json())
         .then(teams => {
@@ -18,6 +18,7 @@ class TeamService {
     }
 
     createTeam(){
+        
         const team = {
             name: document.getElementById('name').value
         }
