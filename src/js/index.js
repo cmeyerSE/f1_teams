@@ -14,15 +14,15 @@ Driver.renderForm()
 Team.renderTeamForm()
 
 function handleSubmit(){
-    event.preventDefault()
+    preventDefault()
     driverService.createDriver()
-    event.target.reset()
+    target.reset()
 }
 
 function handleTeamSubmit(){
-    event.preventDefault()
+    preventDefault()
     teamService.createTeam()
-    event.target.reset()
+    target.reset()
 }
 
 function handleSelectedTeam() {

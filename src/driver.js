@@ -60,7 +60,7 @@ class Driver {
     }
 
     handleClick = () => {
-        if(event.target.innerText === "Delete"){
+        if(target.innerText === "Delete"){
             this.element.remove()
         driverService.deleteDriver(this.id)
         }
